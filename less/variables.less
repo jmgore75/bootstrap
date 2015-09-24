@@ -42,13 +42,13 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          28px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -87,24 +87,26 @@
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-@padding-base-vertical:     6px;
-@padding-base-horizontal:   12px;
+@border-width:              2px;
 
-@padding-large-vertical:    10px;
-@padding-large-horizontal:  16px;
+@padding-base-vertical:     12px;
+@padding-base-horizontal:   24px;
 
-@padding-small-vertical:    5px;
-@padding-small-horizontal:  10px;
+@padding-large-vertical:    20px;
+@padding-large-horizontal:  32px;
 
-@padding-xs-vertical:       1px;
-@padding-xs-horizontal:     5px;
+@padding-small-vertical:    10px;
+@padding-small-horizontal:  20px;
+
+@padding-xs-vertical:       2px;
+@padding-xs-horizontal:     10px;
 
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        8px;
+@border-radius-large:       12px;
+@border-radius-small:       6px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
