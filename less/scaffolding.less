@@ -18,7 +18,7 @@
 
 
 // Body reset
-
+/*
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -31,6 +31,7 @@ body {
   color: @text-color;
   background-color: @body-bg;
 }
+*/
 
 // Reset fonts for relevant elements
 input,
@@ -94,7 +95,7 @@ img {
   padding: @thumbnail-padding;
   line-height: @line-height-base;
   background-color: @thumbnail-bg;
-  border: 1px solid @thumbnail-border;
+  border: @border-width solid @thumbnail-border;
   border-radius: @thumbnail-border-radius;
   .transition(all .2s ease-in-out);
 
@@ -114,7 +115,7 @@ hr {
   margin-top:    @line-height-computed;
   margin-bottom: @line-height-computed;
   border: 0;
-  border-top: 1px solid @hr-border;
+  border-top: @border-width solid @hr-border;
 }
 
 

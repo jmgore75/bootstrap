@@ -426,14 +426,27 @@ module.exports = function (grunt) {
           }
         ]
       }
-    }
+    },
 
+    css_selectors: {
+      options: {
+        mutations: [
+          {prefix: '.reveal'}
+        ]
+      },
+      your_target: {
+        files: {
+          'dist/css/reveal-bootstrap.min.css': ['dist/css/bootstrap.min.css'],
+        },
+      },
+    },
   });
 
 
   // These plugins provide necessary tasks.
   require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
   require('time-grunt')(grunt);
+  grunt.loadNpmTasks('grunt-css-selectors');
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
@@ -479,7 +492,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'css_selectors']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
